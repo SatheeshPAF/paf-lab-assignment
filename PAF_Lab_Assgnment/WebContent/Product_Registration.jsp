@@ -37,22 +37,30 @@
 <title>Product Registration</title>
 </head>
 <body>
-	<form id="formItems" action="item.jsp" method="post">
-		<input id="hidMode" name="hidMode" type="hidden" value="save">
-		<input id="hidID" name="hidID" type="hidden" value="0"> Item
-		Name: <input id="txtItemName" name="txtItemName" type="text">
-		<br /> Item Description <input id="txtItemDesc" name="txtItemDesc"
-			type="text"> <br /> <input id="btnSave" name="btnSave"
-			type="button" value="Save"> <br />
-		<div id="divStsMsgItem">
-			<%
-				out.println(rudFeedback);
-			%>
-		</div>
-		<%
-			out.println(itemGrid);
-		%>
-	</form>
+	<div class="container">
+		<h2>Product Registration</h2>
+		<form action="">
+			<input id="hidMode" name="hidMode" type="hidden" value="save">
+			<input id="hidID" name="hidID" type="hidden" value="0">
+			<div class="form-group">
+				<label for="text">Product Code : </label> <input type="text"
+					class="form-control" id="productCode" name="productCode"
+					placeholder="Enter Product Code">
+			</div>
+			<div class="form-group">
+				<label for="text">Product Name : </label> <input type="text"
+					class="form-control" id="productName" name="productName"
+					placeholder="Enter Product Name">
+			</div>
+			<div class="form-group">
+				<label for="text">Description : </label>
+				<textarea class="form-control" id="description" name="description"
+					placeholder="Product Description"></textarea>
+			</div>
+			<button type="submit" class="btn btn-default">Add New
+				Product</button>
+		</form>
+	</div>
 	<br />
 </body>
 </html>
